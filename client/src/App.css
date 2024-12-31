@@ -16,6 +16,7 @@
 .chatbox {
   flex:1;
   background-color: #343541;
+  position: relative;
 }
 .side-menu-button{
   padding:15px;
@@ -32,6 +33,56 @@
   padding-left: 6px;
   padding-right: 6px;
 }
+.chat-input-holder{
+padding:50px;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+}
+.chat-input-textarea{
+  background-color: #40414f;
+  padding:0.625rem;
+  border: none;
+  outline: none;
+  
+  font-size: 1.5em;
+  color: white;
+  box-shadow: 0 0 8px 0 rgb(0,0,0,0.25);
+  text-align: left;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 800px;
+}
+.bottom-text{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.chat-log{
+  padding:24px;
+  text-align: left;
+  display: flex;
+}
+.chat-message{
+  padding: 12px;
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  
 
+}
+.avatar{
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.message{
+  padding-top: 10px;
+  padding-left: 30px;
+  flex:1
+}
 
 
