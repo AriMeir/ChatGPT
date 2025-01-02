@@ -7,10 +7,18 @@ function Chatbox() {
   const [chatLog, setChatLog] = useState([{gpt: "gpt", message: "Hello, how can I help you today?"}])
 
   async function handleSubmit(e) {
-    e.preventDefault()
-    const response = await MessageService.sendMessage(input)
-    setChatLog([...chatLog, {user : "me", message:`${input}`},{gpt : "gpt", message:`${response.message}`}])
-    setInput('')
+    e.preventDefault();
+    const userMessage = { user: "me", message: `${input}` };
+    setChatLog((prevChatLog) => [
+      ...prevChatLog,  
+      userMessage     
+    ]);
+    setInput('');
+    const response = await MessageService.sendMessage(input);
+    setChatLog((prevChatLog) => [
+      ...prevChatLog, 
+      { gpt: "gpt", message: `${response.message}` }  
+    ]);
   }
 
 
