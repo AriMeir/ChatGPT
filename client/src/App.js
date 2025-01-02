@@ -1,15 +1,14 @@
 
 import './App.css';
 import './normal.css'
-import SideMenu from './components/Sidemenu';
-import Chatbox from './components/Chatbox';
+import ChatIndex from './components/ChatIndex';
 
 
 function App() {
   return (
     <div className="App">
-     <SideMenu/>
-     <Chatbox/>    
+      <ChatIndex/>
+        
     </div>
   );
 }
